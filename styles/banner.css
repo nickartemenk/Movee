@@ -46,7 +46,7 @@
 }
 
 .banner__title {
-  width: 50%;
+  max-width: 480px;
   font-weight: bold;
   font-size: 70px;
   line-height: 89px;
@@ -54,7 +54,7 @@
 }
 
 .banner__subtitle {
-  width: 50%;
+  max-width: 480px;
   font-weight: 600;
   font-size: 30px;
   line-height: 37px;
@@ -62,14 +62,14 @@
 }
 
 .header-button {
-  background: #FF352B;
+  background: var(--button-main);
   width: 100%;
   height: 100%;
   border: none;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
-  color: var(--button-main-text);
+  color: var(--light-gray);
   position: relative;
   cursor: pointer;
 }
@@ -80,28 +80,18 @@
   height: 60px;
 }
 
-.header-button-wrapper:hover .header-button{
+.header-button-wrapper:hover .header-button {
   background-color: var(--header-button-wrapper-hover);
 }
 
-.header-button-wrapper:hover::before{
-  background-color: var(--header-button-wrapper-hover-before);
+.header-button-wrapper:hover::before {
+  background-color: var(--light-gray);
 }
-
-
-/*.header-button-bg {*/
-/*  position: absolute;*/
-/*  border: 2px solid var(--button-main-text);*/
-/*  width: 304px;*/
-/*  height: 60px;*/
-/*  top: 10px;*/
-/*  left: 10px;*/
-/*}*/
 
 .header-button-wrapper::before {
   content: "";
   position: absolute;
-  border: 2px solid var(--button-main-text);
+  border: 2px solid var(--light-gray);
   width: 304px;
   height: 60px;
   top: 10px;
@@ -197,3 +187,4 @@
   justify-content: end;
   position: relative;
 }
+

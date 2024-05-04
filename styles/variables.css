@@ -2,9 +2,8 @@
     --container-bg: #FED100;
     --text-color: #333333;
     --button-main: #FF352B;
-    --button-main-text: #F2F2F2;
+    --light-gray: #F2F2F2;
     --phone-logo-wrapper: #3D9BE9;
     --phone-logo: rgba(61, 155, 233, 0.3);
     --header-button-wrapper-hover: #FF772B;
-    --header-button-wrapper-hover-before: #F2F2F2;
 }
