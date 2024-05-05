@@ -1,38 +1,42 @@
-.process__title{
+.process {
+  color: var(--text-color);
+  padding: 95px 0 104px;
+}
+
+.process__title {
   font-weight: 600;
   font-size: 30px;
   line-height: 37px;
-  padding: 95px 0 60px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
-.process-items{
+.process-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 108px 108px;
   row-gap: 50px;
+  column-gap: 130px;
   align-content: start;
+  padding: 0 60px;
 }
 
-.process-item{
-  padding: 0 0 0 60px;
+.process-item {
   display: grid;
   grid-template-columns: 93px auto;
 }
 
-.process-number{
-  margin-right: 35px;
+.process-number {
   max-width: 66px;
-
 }
 
-.process-subtitle{
+.process-subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-.process-subscription{
+.process-subscription {
   line-height: 21px;
 }
