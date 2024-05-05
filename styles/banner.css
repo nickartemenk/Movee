@@ -1,6 +1,5 @@
 .banner {
   width: 100%;
-  /*height: 650px;*/
   background-color: var(--container-bg);
   padding-top: 40px;
   padding-bottom: 40px;
@@ -199,11 +198,7 @@
   position: relative;
 }
 
-.burger-mobile {
-  display: none;
-}
-
-.items-mobile{
+.burger-mobile, .items-mobile {
   display: none;
 }
 
@@ -251,11 +246,7 @@
 }
 
 @media (max-width: 850px) {
-  .phone {
-    display: none;
-  }
-
-  .nav {
+  .phone, .nav {
     display: none;
   }
 
@@ -298,56 +289,48 @@
     line-height: 21px;
   }
 
-  .right{
+  .right, .header-button-wrapper {
     display: none;
   }
 
-  .header-button-wrapper{
-    display: none;
-  }
-
-  .content{
+  .content {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .logo{
+  .logo {
     width: 62px;
     height: 20px;
   }
 
-  .banner-info{
+  .banner-info {
     margin-top: 16px;
   }
 
-  .banner__title {
+  .banner__title, .banner__subtitle  {
     padding: 0;
   }
-
-  .banner__subtitle{
-    padding: 0;
-  }
-
-  .items-mobile{
+  
+  .items-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -20px ;
+    margin-top: -20px;
   }
 
-  .banner-man-mobile{
+  .banner-man-mobile {
     width: 248px;
     height: 396px;
   }
 
-  .header-button-wrapper-mobile{
+  .header-button-wrapper-mobile {
     width: 304px;
     height: 60px;
   }
 
-  .header-button-mobile{
+  .header-button-mobile {
     background: var(--button-main);
     width: 100%;
     height: 100%;
