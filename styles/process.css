@@ -1,0 +1,38 @@
+.process__title{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  padding: 95px 0 60px;
+  text-align: center;
+}
+
+.process-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 108px 108px;
+  row-gap: 50px;
+  align-content: start;
+}
+
+.process-item{
+  padding: 0 0 0 60px;
+  display: grid;
+  grid-template-columns: 93px auto;
+}
+
+.process-number{
+  margin-right: 35px;
+  max-width: 66px;
+
+}
+
+.process-subtitle{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 15px;
+}
+
+.process-subscription{
+  line-height: 21px;
+}
