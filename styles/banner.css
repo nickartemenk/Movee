@@ -127,7 +127,7 @@
 .banner-bus {
   position: absolute;
   top: 90px;
-  right: -100px;
+  right: 0;
 }
 
 .banner-man {
@@ -218,7 +218,7 @@
   }
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1150px) {
   .banner-man {
     right: 180px;
   }
