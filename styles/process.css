@@ -1,6 +1,7 @@
 .process {
   color: var(--text-color);
-  padding: 95px 0 104px;
+  padding-top: 95px;
+  padding-bottom: 52px;
 }
 
 .process__title {
