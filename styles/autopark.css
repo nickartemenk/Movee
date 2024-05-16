@@ -1,0 +1,140 @@
+.autopark {
+  color: var(--text-color);
+  padding-top: 52px;
+  padding-bottom: 24px;
+}
+
+.autopark__title {
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.autopark__subtitle {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 65px;
+}
+
+.autopark-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.autopark-item {
+  border: 1px solid var(--card-border);
+  max-width: 200px;
+  width: 100%;
+  padding: 13px 45px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.autopark-item:hover {
+  border: 1px solid var(--yellow);
+  box-shadow: 0 12px 24px var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.autopark-slider {
+  display: flex;
+}
+
+.autopark-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.autopark-card-left {
+  margin: 97px 112px 0 148px;
+  position: relative;
+}
+
+.autopark-card-right {
+  margin-top: 47px;
+  position: relative;
+}
+
+.autopark-card__title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  margin-bottom: 39px;
+}
+
+.autopark-card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+
+.autopark-card__description-item {
+  display: flex;
+}
+
+.autopark-card__checkmark {
+  margin-right: 16px;
+  gap: 35px;
+}
+
+.autopark-card__button-wrapper {
+  max-width: 250px;
+  width: 100%;
+  height: 51px;
+}
+
+.autopark-card__button-wrapper:hover {
+  box-shadow: 0 4px 24px var(--yellow);
+  transition: all 0.3s ease;
+}
+
+.autopark-card__button {
+  background: var(--yellow);
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.autopark-card__button:hover {
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.arrow-left {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  left: -96px;
+  top: 137px;
+}
+
+.arrow-right {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 187px;
+  right: -107px;
+}
+
+.autopark-slider__kabluk{
+  display: none;
+}
+
+.autopark-slider__truck{
+  display: none;
+}
