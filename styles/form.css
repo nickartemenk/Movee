@@ -118,6 +118,12 @@
 
 .form-checkbox__agreement:checked + .form-check-box__agreement {
   background-image: url(../assets/form/agreement-on.svg);
+  border: none;
+}
+
+.form-check-box__text{
+  max-width: 150px;
+  width: 100%;
 }
 
 .form-service__wrapper {
@@ -135,9 +141,9 @@
 
 .form-check-box__agreement {
   width: 15px;
-  height: 16px;
+  height: 15px;
   background-color: var(--white);
-  border: 1px solid var(--text-color);
+  border: 2px solid var(--text-color);
   border-radius: 10%;
 }
 
@@ -230,6 +236,7 @@
 @media (max-width: 800px) {
   .form-timer-button {
     gap: 20px;
+    justify-content: space-around;
   }
 
   .form-check__service-wrapper {
@@ -239,7 +246,7 @@
 
 @media (max-width: 730px) {
   .form-timer {
-    font-size: 48px;
+    font-size: 70px;
   }
 
   .form-check__service-wrapper {
@@ -252,6 +259,11 @@
   .form-name-number {
     flex-direction: column;
     gap: 35px;
+  }
+
+  .form-check-box{
+    width: 35px;
+    background-repeat: no-repeat;
   }
 
   .form-name, .form-number {
@@ -285,6 +297,10 @@
 
   .form-region {
     margin-bottom: 0;
+  }
+
+  .form-timer{
+    font-size: 45px;
   }
 }
 
