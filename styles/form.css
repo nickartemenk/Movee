@@ -264,6 +264,7 @@
   .form-name, .form-number {
     max-width: 900px;
     width: 100%;
+    border-radius: 0;
   }
 }
 
