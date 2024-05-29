@@ -92,6 +92,7 @@
 }
 
 .form-checkbox, .form-checkbox__service, .form-checkbox__agreement {
+  background-position: center;
   position: absolute;
   -webkit-appearance: none;
 }
