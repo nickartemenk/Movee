@@ -6,8 +6,8 @@
     --phone-logo-wrapper: #3D9BE9;
     --phone-logo: rgba(61, 155, 233, 0.3);
     --header-button-wrapper-hover: #FF772B;
-    --price-card-border: #EBEBEB;
+    --card-border: #EBEBEB;
     --prices-mobile-bg: #F8FBFF;
-    --price-card-shadow: rgba(0, 0, 0, 0.15);
+    --card-shadow: rgba(0, 0, 0, 0.15);
     --white: #FFFFFF;
 }

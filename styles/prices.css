@@ -27,7 +27,7 @@
 }
 
 .prices-card {
-  border: 1px solid var(--price-card-border);
+  border: 1px solid var(--card-border);
   max-width: 350px;
   width: 100%;
   padding: 84px 10px 78px;
@@ -39,7 +39,7 @@
 
 .prices-card:hover {
   border: 1px solid var(--yellow);
-  box-shadow: 0 12px 24px var(--price-card-shadow);
+  box-shadow: 0 12px 24px var(--card-shadow);
   transition: all 0.3s ease;
 }
 
@@ -81,6 +81,7 @@
 
 .prices-card__button {
   background: var(--yellow);
+  color: var(--text-color);
   width: 100%;
   height: 100%;
   border: none;
