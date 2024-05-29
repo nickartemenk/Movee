@@ -121,11 +121,6 @@
   border: none;
 }
 
-.form-check-box__text{
-  max-width: 150px;
-  width: 100%;
-}
-
 .form-service__wrapper {
   display: flex;
   flex-wrap: wrap;
