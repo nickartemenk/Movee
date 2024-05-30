@@ -13,7 +13,7 @@
   <title>Movee</title>
 </head>
 <body>
-<section class="banner">
+<section id="banner" class="banner">
   <header class="header container">
     <img class="logo" src="./assets/banner/logo.svg" alt="logo"/>
     <img class="burger-mobile" src="./assets/banner/burger-mobile.svg" alt="burger"/>
@@ -113,7 +113,7 @@
     </li>
   </ol>
 </section>
-<section class="prices container">
+<section id="prices" class="prices container">
   <h2 class="prices__title">Цены</h2>
   <h3 class="prices__subtitle">Фиксированная стоимость на переезд под ключ </h3>
   <ul class="prices-items">
@@ -168,7 +168,7 @@
     <a class="prices-card__link">Все цены</a>
   </div>
 </section>
-<section class="autopark container">
+<section id="autopark" class="autopark container">
   <h2 class="autopark__title">Автопарк</h2>
   <h3 class="autopark__subtitle">10 видов автомобилей от 800 кг до 10 тонн </h3>
   <div class="autopark-items">
@@ -305,7 +305,7 @@
     </div>
   </div>
 </section>
-<section class="reviews">
+<section id="reviews" class="reviews">
   <div class="reviews-content container">
     <h2 class="reviews-title">Отзывы</h2>
     <div class="reviews-cards">
@@ -451,8 +451,8 @@
     </div>
   </div>
 </section>
-<section class="map">
-  <iframe
+<section id="map" class="map">
+  <iframe class="map-wrapper"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.3789169969114!2d23.694214076991305!3d52.09103516789986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2svulica%20Budzionaha%2064%2C%20Brest%2C%20Brest%20Region!5e0!3m2!1sen!2sby!4v1717010407448!5m2!1sen!2sby"
     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -474,19 +474,69 @@
     </ul>
     <div class="map-social">
       <a class="map-social__youtube">
-        <img class="map-social__youtube-icon" src="./assets/map/youtube.svg" alt="/"/>
+        <img class="map-social__youtube-icon" src="./assets/social-networks/youtube.svg" alt="/"/>
       </a>
       <a class="map-social__vk">
-        <img class="map-social__vk-icon" src="./assets/map/vk.svg" alt="/"/>
+        <img class="map-social__vk-icon" src="./assets/social-networks/vk.svg" alt="/"/>
       </a>
       <a class="map-social__fb">
-        <img class="map-social__fb-icon" src="./assets/map/fb.svg" alt="/"/>
+        <img class="map-social__fb-icon" src="./assets/social-networks/fb.svg" alt="/"/>
       </a>
       <a class="map-social__inst">
-        <img class="map-social__inst-icon" src="./assets/map/inst.svg" alt="/"/>
+        <img class="map-social__inst-icon" src="./assets/social-networks/inst.svg" alt="/"/>
       </a>
     </div>
   </div>
+  <div class="map-description-mobile">
+    <p class="map-item__text-mobile">Брест</p>
+    <p class="map-item__number-mobile"><a href="tel:80299991213">8 (039)-999-12-13</a></p>
+    <p class="map-item__mail-mobile"><a href="mailto:hello@movee.ru">hello@movee.ru</a></p>
+  </div>
 </section>
+<footer>
+  <div class="footer container">
+    <div class="footer-privacy-agreement">
+      <h2 class="footer-privacy__title">MOVEE</h2>
+      <p class="footer-privacy">Политика
+        конфиденциальности</p>
+      <p class="footer-agreement">Соглашение на обработку персональных данных</p>
+    </div>
+    <nav class="footer-nav">
+      <a class="footer-nav__item" href="#banner">Главная</a>
+      <a class="footer-nav__item" href="#prices">Цена</a>
+      <a class="footer-nav__item" href="#autopark">Автопарк</a>
+      <a class="footer-nav__item" href="#reviews">Отзывы</a>
+      <a class="footer-nav__item" href="#map">Контакты</a>
+    </nav>
+    <div class="footer-social-mail">
+    <div class="footer-social">
+      <a class="footer-social__youtube">
+        <img class="footer-social__youtube-icon" src="./assets/social-networks/youtube.svg" alt="/"/>
+      </a>
+      <a class="footer-social__vk">
+        <img class="footer-social__vk-icon" src="./assets/social-networks/vk.svg" alt="/"/>
+      </a>
+      <a class="footer-social__fb">
+        <img class="footer-social__fb-icon" src="./assets/social-networks/fb.svg" alt="/"/>
+      </a>
+      <a class="footer-social__inst">
+        <img class="footer-social__inst-icon" src="./assets/social-networks/inst.svg" alt="/"/>
+      </a>
+    </div>
+    <p ><a class="footer-social__mail" href="mailto:hello@movee.ru">hello@movee.ru</a></p>
+    </div>
+    <div class="footer-button-number">
+      <a href="tel:80299991213">
+      <div class="footer__button-wrapper">
+        <button class="footer__button">Обратный звонок</button>
+      </div>
+        <div class="footer__button-wrapper-mobile">
+          <button class="footer__button-mobile">Заказать</button>
+        </div>
+      </a>
+      <div class="footer__number"><a href="tel:80299991213">8(029)-999-12-13</a></div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
