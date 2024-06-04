@@ -30,6 +30,7 @@
 }
 
 .reviews-read{
+  color: var(--text-color);
   border: none;
   background-color: transparent;
   padding: 0;
@@ -74,8 +75,10 @@
 }
 
 .reviews__button:hover {
-  color: var(--white);
+  background: var(--white);
   transition: all 0.3s ease;
+  font-weight: 700;
+  border: none;
 }
 
 @media (max-width: 850px){
