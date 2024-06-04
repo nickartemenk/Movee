@@ -161,6 +161,7 @@
 
   .prices-card__button-mobile {
     background: var(--yellow);
+    color: var(--text-color);
     width: 100%;
     height: 100%;
     border: none;

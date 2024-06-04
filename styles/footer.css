@@ -87,6 +87,13 @@ footer{
   cursor: pointer;
 }
 
+.footer__button:hover{
+  background: var(--white);
+  transition: all 0.3s ease;
+  font-weight: 700;
+  border: none;
+}
+
 .footer__number{
   font-weight: 500;
   font-size: 20px;
@@ -131,7 +138,7 @@ footer{
   }
 
   .footer-social{
-    margin-bottom: unset;
+    margin-bottom: 20px;
   }
 
   .footer-social-mail{
@@ -139,7 +146,7 @@ footer{
   }
 }
 
-@media (max-width: 320px){
+@media (max-width: 482px){
   .footer__number, .footer__button-wrapper{
     display: none;
   }
@@ -161,10 +168,6 @@ footer{
     margin-bottom: 46px;
   }
 
-  .footer-social{
-    margin-bottom: 20px;
-  }
-
   .footer__button-wrapper-mobile {
     display: block;
     width: 292px;
@@ -181,5 +184,12 @@ footer{
     font-size: 20px;
     line-height: 24px;
     cursor: pointer;
+  }
+
+  .footer__button-mobile:hover{
+    background: var(--white);
+    transition: all 0.3s ease;
+    font-weight: 700;
+    border: none;
   }
 }
