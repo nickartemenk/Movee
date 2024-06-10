@@ -25,6 +25,7 @@ footer{
 .footer-privacy{
   margin-bottom: 36px;
   color: var(--footer-privacy-agreement);
+  display: block;
 }
 
 .footer-agreement{
@@ -91,7 +92,7 @@ footer{
   background: var(--white);
   transition: all 0.3s ease;
   font-weight: 700;
-  border: none;
+  border: 1px solid var(--white);
 }
 
 .footer__number{
@@ -190,6 +191,6 @@ footer{
     background: var(--white);
     transition: all 0.3s ease;
     font-weight: 700;
-    border: none;
+    border: 1px solid var(--white);
   }
 }

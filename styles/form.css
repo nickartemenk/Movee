@@ -66,12 +66,13 @@
 
 .form-service__title-arrow {
   position: relative;
+  cursor: pointer;
 }
 
 .form-service__arrow {
   position: absolute;
-  top: 10px;
-  left: 283px;
+  top: 13px;
+  left: 290px;
   transform: translate(-50%, -50%);
 }
 
@@ -85,6 +86,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  cursor: pointer;
 }
 
 .form-check-box__service-text {
@@ -114,6 +116,10 @@
 }
 
 .form-checkbox__service:checked:focus + .form-check-box__service {
+  background-image: url(../assets/form/checkbox-on.svg);
+}
+
+.form-checkbox__service:checked:hover + .form-check-box__service {
   background-image: url(../assets/form/checkbox-on.svg);
 }
 
