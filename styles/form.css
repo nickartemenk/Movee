@@ -82,7 +82,7 @@
   transition: transform 0.5s ease;
 }
 
-.active {
+.form-service__arrow.active {
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
@@ -149,7 +149,7 @@
   top: 32px;
 }
 
-.form-service-none {
+.form-service__wrapper.hidden {
   height: 100%;
   max-height: 0;
   overflow: hidden;
@@ -185,12 +185,8 @@
   transition: 0.5s;
 }
 
-.timer-marg {
-  display: flex;
-  align-items: center;
-  gap: 65px;
+.form-timer-button.open-form-service {
   margin-top: 104px;
-  transition: 0.5s;
 }
 
 .form-timer {
