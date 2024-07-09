@@ -72,6 +72,8 @@
 .form-service__title-arrow {
   position: relative;
   cursor: pointer;
+  max-width: 310px;
+  width: 100%;
 }
 
 .form-service__arrow {
@@ -340,7 +342,7 @@
     padding: 62px 16px 70px;
   }
 
-  .form-title, .form-region-city, .form-method__title, .form-method__wrapper, .form-service__title, .form-service__wrapper, .form-timer {
+  .form-title, .form-region-city, .form-method__title, .form-method__wrapper, .form-service__title-arrow, .form-service__wrapper, .form-timer {
     display: none;
   }
 
