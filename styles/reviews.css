@@ -36,8 +36,6 @@
 
 .reviews-item.active .reviews-more {
   display: inline;
-  overflow: hidden;
-  transition: 1s;
 }
 
 .reviews-item.active .reviews-dots{
@@ -46,8 +44,6 @@
 
 .reviews-more{
   display: none;
-  overflow: hidden;
-  transition: 1s;
 }
 
 .reviews-read{
