@@ -29,6 +29,23 @@
   margin-bottom: 18px;
 }
 
+.reviews-item{
+  max-width: 400px;
+  width: 100%;
+}
+
+.reviews-item.active .reviews-more {
+  display: inline;
+}
+
+.reviews-item.active .reviews-dots{
+  display: none;
+}
+
+.reviews-more{
+  display: none;
+}
+
 .reviews-read{
   color: var(--text-color);
   border: none;
@@ -93,6 +110,10 @@
   .reviews-item:nth-child(n+2){
     display: none;
     max-width: unset;
+  }
+
+  .reviews-item{
+    max-width: none;
   }
 }
 
