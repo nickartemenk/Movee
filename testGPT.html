@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бургер Меню</title>
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: overflow 0.3s ease; /* Плавный переход для overflow */
+    }
+    .burger {
+      z-index: 3;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+    .line {
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: #333;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Скрыто за пределами экрана */
+      height: 100%;
+      width: 100%;
+      background: #444;
+      color: white;
+      padding: 20px;
+      transition: right 0.3s ease;
+      overflow: auto; /* Позволяет скролл внутри меню, если есть много контента */
+    }
+    .menu.active {
+      right: 0; /* Перемещение меню в видимую область экрана */
+    }
+    .menu.active ~ body {
+      overflow: hidden; /* Блокировка скроллинга страницы */
+    }
+  </style>
+</head>
+<body>
+<div class="burger" onclick="toggleMenu()">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+
+<div class="menu" id="menu">
+  <h1>Меню</h1>
+  <p><a href="#" style="color: white;">Home</a></p>
+  <p><a href="#" style="color: white;">About</a></p>
+  <p><a href="#" style="color: white;">Services</a></p>
+  <p><a href="#" style="color: white;">Contact</a></p>
+  <p>Дополнительный контент, который может вызвать скролл.</p>
+  <p>Здесь может быть много текста для проверки скролла.</p>
+  <p>Продолжайте добавлять текст...</p>
+  <p>...и еще больше текста.</p>
+</div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+  }
+</script>
+</body>
+</html>
+
