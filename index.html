@@ -13,19 +13,31 @@
   <title>Movee</title>
   <script src="./scripts/dropdown.js" defer></script>
   <script src="./scripts/reviews-read.js" defer></script>
+  <script src="./scripts/burger.js" defer></script>
 </head>
 <body>
 <section id="banner" class="banner">
   <header class="header container">
     <img class="logo" src="./assets/banner/logo.svg" alt="logo"/>
-    <img class="burger-mobile" src="./assets/banner/burger-mobile.svg" alt="burger"/>
-    <nav class="nav">
-      <div class="nav-items">
-        <a class="nav-items__item" href="#prices">Цены</a>
-        <a class="nav-items__item" href="#autopark">Автопарк</a>
-        <a class="nav-items__item" href="#reviews">Отзывы</a>
-        <a class="nav-items__item" href="#map">Контакты</a>
-      </div>
+    <button class="burger-mobile__btn">
+      <span></span><span></span><span></span>
+    </button>
+    <img class="btn-up" src="./assets/form/arrow.svg" alt="/">
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a class="menu-link" href="#prices">Цены</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#autopark">Автопарк</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#map">Контакты</a>
+        </li>
+      </ul>
     </nav>
     <div class="phone"><a href="tel:80299991213">8(029)-999-12-13</a></div>
   </header>
