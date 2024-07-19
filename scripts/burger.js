@@ -17,7 +17,7 @@ burgerMenuBtn.addEventListener("click", () => {
 menuItems.forEach(menuItem => {
     menuItem.addEventListener("click", () => {
         toggleClasses()
-        btnUp.classList.toggle("active");
+        btnUp.classList.add("active");
     })
 });
 
@@ -27,5 +27,5 @@ btnUp.addEventListener("click", () => {
         left: 0,
         behavior: 'smooth'
     })
-    btnUp.classList.toggle("active");
+    btnUp.classList.remove("active");
 });
