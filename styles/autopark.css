@@ -45,14 +45,29 @@
   transition: all 0.3s ease;
 }
 
+.autopark-item.active {
+  border: 1px solid var(--yellow);
+  box-shadow: 0 12px 24px var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
 .autopark-slider {
   display: flex;
   position: relative;
+  overflow: hidden;
+}
+
+.autopark-slider__track{
+  display: flex;
+  transition: transform .5s ease-out;
 }
 
 .autopark-card {
   display: flex;
   justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  margin-right: 900px;
 }
 
 .autopark-card-left {
@@ -134,7 +149,7 @@
   transform: translate(-50%, -50%);
 }
 
-.autopark-slider__item:nth-child(n+2), .autopark-image-mobile, .autopark-dots, .autopark-description__mobile, .autopark-card__button-wrapper-mobile, .autopark-card__button-mobile{
+.autopark-image-mobile, .autopark-dots, .autopark-description__mobile, .autopark-card__button-wrapper-mobile, .autopark-card__button-mobile{
   display: none;
 }
 
