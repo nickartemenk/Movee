@@ -1,8 +1,8 @@
 const track = document.querySelector('.autopark-slider__track');
-const items = document.querySelectorAll('.autopark-slider__item');
+const sliderItems = document.querySelectorAll('.autopark-slider__item');
 const nextButton = document.querySelector('.arrow-right');
 const prevButton = document.querySelector('.arrow-left');
-const itemElements = document.querySelectorAll('.autopark-item');
+const autoParkItems = document.querySelectorAll('.autopark-item');
 const dots = document.querySelectorAll('.autopark-dots__wrapper');
 
 let currentIndex = 0;
@@ -17,17 +17,17 @@ function updateSlideWidth() {
 
 function updateArrowVisibility() {
   prevButton.style.display = currentIndex === 0 ? 'none' : '';
-  nextButton.style.display = currentIndex === items.length - 1 ? 'none' : '';
+  nextButton.style.display = currentIndex === sliderItems.length - 1 ? 'none' : '';
 }
 
 function updateActiveItem() {
-  itemElements.forEach((item, index) => {
+  autoParkItems.forEach((item, index) => {
     item.classList.toggle('active', index === currentIndex);
   });
 }
 
 nextButton.addEventListener('click', function () {
-  if (currentIndex < items.length - 1) {
+  if (currentIndex < sliderItems.length - 1) {
     currentIndex++;
     updateSlideWidth();
   }
@@ -40,7 +40,7 @@ prevButton.addEventListener('click', function () {
   }
 });
 
-itemElements.forEach((item, index) => {
+autoParkItems.forEach((item, index) => {
   item.addEventListener('click', function () {
     currentIndex = index;
     updateSlideWidth();
