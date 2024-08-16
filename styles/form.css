@@ -27,24 +27,51 @@
   margin-bottom: 7px;
 }
 
-.form-name, .form-number, .form-region, .form-city, .form-add-city {
+.form-name, .form-input-box, .form-number, .form-region, .form-city, .form-add-city {
   max-width: 300px;
   width: 100%;
   border-bottom: 1px solid var(--text-color);
   height: 34px;
 }
 
-.form-region {
+.form-add-city{
+  margin-top: 30px;
+}
+
+.form-input-box.error{
+  border: 1px solid var(--button-main);
+}
+
+.form-name.error, .form-number.error{
+  border-bottom: 1px solid var(--button-main);
+}
+
+.form-name.error::placeholder, .form-number.error::placeholder {
+  color: var(--button-main);
+}
+
+.error-label{
+  color: var(--button-main);
+}
+
+.form-region.error, .form-city.error{
+  border-bottom: 1px solid var(--button-main);
+}
+
+.error-label{
+  color: var(--button-main);
+}
+
+.form-region, .form-city {
   border: none;
   border-bottom: 1px solid var(--text-color);
   font-family: "Montserrat", sans-serif;
   width: 100%;
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 30px;
 }
 
-.form-region__wrapper {
+.form-region__wrapper, .form-city__wrapper {
   margin-right: 70px;
   max-width: 300px;
   width: 100%;
@@ -52,10 +79,6 @@
 
 .form-name, .form-number, .form-region, .form-city, .form-add-city:focus {
   outline: none;
-}
-
-.form-city {
-  margin-bottom: 30px;
 }
 
 .form-region__title, .form-city__title, .form-method__title {
@@ -90,11 +113,21 @@
 
 .form-method__wrapper {
   display: flex;
-  gap: 40px;
+  gap: 10px 60px;
   margin-bottom: 63px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.form-check, .form-check__service, .form-check__agreement {
+.form-check__service, .form-check__agreement {
+  display: flex;
+  align-items: center;
+  gap: 5px 16px;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.form-check{
   display: flex;
   align-items: center;
   gap: 16px;
@@ -181,7 +214,6 @@
 
 .form-timer-button {
   display: flex;
-  align-items: center;
   gap: 65px;
   margin-top: 72px;
   transition: 0.5s;
