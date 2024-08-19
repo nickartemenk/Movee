@@ -1,69 +1,91 @@
 const validations = () =>{
-  const formName = document.querySelector('.form-name');
-  const formNumber = document.querySelector('.form-number');
-  const agreement = document.querySelector('.form-checkbox__agreement');
   const region = document.querySelector('.form-region');
   const city = document.querySelector('.form-city');
   const paymentMethods = document.querySelectorAll('.form-method__wrapper input[type="radio"]');
+  const formName = document.querySelector('.form-name');
+  const formNumber = document.querySelector('.form-number');
+  const agreement = document.querySelector('.form-checkbox__agreement');
 
-  let result = true;
+  let isValid = true;
   let resultPaymentMethods = Array.from(paymentMethods).some(input => input.checked);
 
   if (formName.value === "") {
     createError(formName)
-    result = false
+    isValid = false
   } else {
     removeError(formName)
   }
 
   if (formNumber.value === "") {
     createError(formNumber)
-    result = false
+    isValid = false
   } else {
     removeError(formNumber)
   }
 
+  if (agreement.checked === false) {
+    createErrorForAgreement(agreement)
+    isValid = false
+  } else {
+    removeError(agreement)
+  }
+
   if (region.value === "none") {
     createErrorForSelect(region)
-    result = false
+    isValid = false
   } else {
     removeError(region)
   }
 
   if (city.value === "none") {
     createErrorForSelect(city)
-    result = false
+    isValid = false
   } else {
     removeError(city)
   }
 
-  if (agreement.checked === false) {
-    createErrorForAgreement(agreement)
-    result = false
-  } else {
-    removeError(agreement)
-  }
-
   if (resultPaymentMethods === false) {
     createErrorForRadioButton()
-    result = false
+    isValid = false
   } else {
     removeErrorForRadioButton()
   }
 
-  return result
+  return isValid
 
 };
 
-document.querySelector('.form-add-city').addEventListener('keyup', (event) => {
+const validationsMobile = () => {
+  const formName = document.querySelector('.form-name');
+  const formNumber = document.querySelector('.form-number');
+  const agreement = document.querySelector('.form-checkbox__agreement');
 
-  if (event.keyCode === 13 && event.target.value.trim() !== '') { /*если нажата клавиша enter и введен текс без пбелов*/
+  let isValid = true
 
-    addNewCity(event.target.value); /*добавляет город*/
-
-    event.target.value = ''; /*очищает поле ввода после добавления*/
+  if (formName.value === "") {
+    createError(formName)
+    isValid = false
+  } else {
+    removeError(formName)
   }
-});
+
+  if (formNumber.value === "") {
+    createError(formNumber)
+    isValid = false
+  } else {
+    removeError(formNumber)
+  }
+
+  if (agreement.checked === false) {
+    createErrorForAgreement(agreement)
+    isValid = false
+  } else {
+    removeError(agreement)
+  }
+
+  return isValid
+
+};
 
 const addNewCity = (cityName) => {
   const formCitySelect = document.querySelector('.form-city');
@@ -83,6 +105,7 @@ const removeError = (htmlElement) => {
   const parent = htmlElement.parentNode; /* ищет родителя*/
 
   const errorLabel = parent.querySelector('.error-label');/*у родителя находит элемент с классом*/
+  if (!errorLabel) return
 
   htmlElement.classList.remove('error');/*убирает класс у элемента который мы передали(input, select... может быть любой элемент*/
   parent.removeChild(errorLabel);/*у родителя удаляем ребенка который лежит в переменной errorLabel*/
@@ -93,6 +116,7 @@ const removeErrorForRadioButton = () => {
   const wrapper = document.querySelector('.form-method__wrapper');
 
   const errorLabel = wrapper.querySelector('.error-label');
+  if (!errorLabel) return
 
   wrapper.classList.remove('error');
   wrapper.removeChild(errorLabel);
@@ -143,14 +167,12 @@ const createError = (htmlElement) => {
   errorLabel.textContent = 'Поле не заполнено!';   /*меняет такс у элемента лежащего в errorlabel*/
   parent.append(errorLabel); /*вставляет элемент в html разметку*/
   htmlElement.classList.add('error');
-  // console.log(currentErrorLabel)
   }
 }
 
 const createErrorForSelect = (htmlElement) => {
 
   const parent = htmlElement.parentNode;
-  const value = parent.value
 
   const currentErrorLabel = parent.querySelector('.error-label');/*ессли элемент с классом error-label найден вернит этот элемент если такой элемент отсутствует вернет null.*/
 
@@ -164,10 +186,26 @@ const createErrorForSelect = (htmlElement) => {
   }
 }
 
+document.querySelector('.form-add-city').addEventListener('keydown', (event) => {
+  if (event.keyCode === 13 && event.target.value.trim() !== '') { /*если нажата клавиша enter и введен текс без пбелов*/
+    event.preventDefault()
+    addNewCity(event.target.value); /*добавляет город*/
+    event.target.value = ''; /*очищает поле ввода после добавления*/
+  }
+});
+
+const getIsMobile = () => {
+  const mobileThreshold = 550;
+
+  return window.innerWidth <= mobileThreshold;
+}
+
 document.querySelector('.form-wrapper').addEventListener('submit', event => {
   event.preventDefault();
+  console.log(validationsMobile());
 
-  if (validations() === true) {
+  const func = getIsMobile() ? validationsMobile : validations;
+  if (func() === true) {
   alert('Форма проверена успешно')
-  } 
+  }
 });
