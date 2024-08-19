@@ -34,15 +34,15 @@
   margin-right: auto;
 }
 
-.form-add-city{
+.form-add-city {
   margin-top: 30px;
 }
 
-.form-input-box.error{
+.form-input-box.error {
   border: 1px solid var(--button-main);
 }
 
-.form-name.error, .form-number.error{
+.form-name.error, .form-number.error {
   border-bottom: 1px solid var(--button-main);
 }
 
@@ -50,15 +50,15 @@
   color: var(--button-main);
 }
 
-.error-label{
+.error-label {
   color: var(--button-main);
 }
 
-.form-region.error, .form-city.error{
+.form-region.error, .form-city.error {
   border-bottom: 1px solid var(--button-main);
 }
 
-.error-label{
+.error-label {
   color: var(--button-main);
 }
 
@@ -127,7 +127,7 @@
   flex-wrap: wrap;
 }
 
-.form-check{
+.form-check {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -309,7 +309,7 @@
 }
 
 @media (max-width: 750px) {
-  .form-method__wrapper{
+  .form-method__wrapper {
     gap: 10px;
   }
 }
@@ -358,7 +358,7 @@
 }
 
 @media (max-width: 655px) {
-  .form-method__wrapper{
+  .form-method__wrapper {
     flex-direction: column;
   }
 
@@ -394,11 +394,11 @@
 }
 
 @media (max-width: 550px) {
-  .form-check__agreement{
+  .form-check__agreement {
     justify-content: center;
   }
 
-  .form-btn-check{
+  .form-btn-check {
     align-items: center;
   }
 
@@ -457,13 +457,13 @@
   }
 }
 
-@media (max-width: 410px){
+@media (max-width: 410px) {
   .form-check__agreement > .error-label:last-child {
     font-size: 13px;
   }
 }
 
-@media (max-width: 340px){
+@media (max-width: 340px) {
   .form-check__agreement > .error-label:last-child {
     font-size: 11px;
   }
