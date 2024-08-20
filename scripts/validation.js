@@ -196,13 +196,8 @@ document.querySelector('.form-add-city').addEventListener('keydown', (event) => 
 
 const getIsMobile = () => {
   const mobileThreshold = 550;
-  const userAgent = navigator.userAgent && navigator.vendor;
 
-  const isSmallScreen = window.innerWidth <= mobileThreshold;
-
-  const isMobileUserAgent = /mobile/i.test(userAgent);
-
-  return isSmallScreen || isMobileUserAgent;
+  return window.innerWidth <= mobileThreshold;
 }
 
 document.querySelector('.form-wrapper').addEventListener('submit', event => {
