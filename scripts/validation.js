@@ -196,13 +196,17 @@ document.querySelector('.form-add-city').addEventListener('keydown', (event) => 
 
 const getIsMobile = () => {
   const mobileThreshold = 550;
+  const userAgent = navigator.userAgent && navigator.vendor;
 
-  return window.innerWidth <= mobileThreshold;
+  const isSmallScreen = window.innerWidth <= mobileThreshold;
+
+  const isMobileUserAgent = /mobile/i.test(userAgent);
+
+  return isSmallScreen || isMobileUserAgent;
 }
 
 document.querySelector('.form-wrapper').addEventListener('submit', event => {
   event.preventDefault();
-  console.log(validationsMobile());
 
   const func = getIsMobile() ? validationsMobile : validations;
   if (func() === true) {
