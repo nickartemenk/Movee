@@ -225,6 +225,7 @@
 
 .form-timer {
   font-size: 96px;
+  display: flex;
 }
 
 .form-title__mobile, .form-button-mobile {
