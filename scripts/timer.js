@@ -1,17 +1,30 @@
+const getInitialTotalSeconds = () => {
+  const storageValue = localStorage.getItem('initialTimer'); //извлекает значение с ключом initialtimer если такого ключа нет вернет null
+
+  if (storageValue !== null && !isNaN(storageValue)) { //если storageValue не null и не nan
+    return parseInt(storageValue);
+  }
+
+  return 4000;
+}
+
+// сохраняет значения в LocalStorage
+const saveTotalSeconds = (value) => {
+  localStorage.setItem('initialTimer', value);
+}
+
+let totalSeconds = getInitialTotalSeconds();
+
 const timer = () => {
   const timerElement = document.querySelector('.form-timer');
 
-  let totalSeconds = parseInt(timerElement.textContent.split(':')[0]) * 3600 + // split азбивает строки на массив по разделителю (:) [максимально количество элементов]
-    parseInt(timerElement.textContent.split(':')[1]) * 60 +
-    parseInt(timerElement.textContent.split(':')[2]);
-
-  const interval = setInterval(function() { //setInterval вызывает функию регулярно через заданные отрезки времени
-    --totalSeconds; //каждую секунду уменьшается на единицу (префиксная и постфиксная форма спросить)
-
-    if (totalSeconds < 0) { // если totalSeconds меньше ноля интервал прекращается
-      clearInterval(interval);
-      alert('Время истекло!');
-      return;
+    if (totalSeconds > 0) {
+      --totalSeconds;
+      setTimeout(timer, 1000)
+      saveTotalSeconds(totalSeconds);
+    } else {
+      clearTimeout(timer);
+      timerElement.classList.add('hidden-after-end')
     }
 
     //расчет текущего времени
@@ -21,7 +34,6 @@ const timer = () => {
 
     // обновление текста элемента timerElement
     timerElement.textContent = String(hours).padStart(2, '0') + ':' + String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');//string преобразует в строку padstart задает минимальное количество символов в строке с нолем слева если это нужно плюс разделитель в виде :
-  }, 1000);
 }
 
 timer();
