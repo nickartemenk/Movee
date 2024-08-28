@@ -5,7 +5,7 @@ const getInitialTotalSeconds = () => {
     return parseInt(storageValue);
   }
 
-  return 4000;
+  return 1000;
 }
 
 // сохраняет значения в LocalStorage
@@ -37,3 +37,45 @@ const timer = () => {
 }
 
 timer();
+
+
+// TIMER V2
+// const timerElement = document.querySelector('.form-timer');
+// const timeDiscountEnd = Date.now() + 100_000;
+// let interval;
+//
+// const countDown = () => {
+//   const totalSeconds = +localStorage.getItem('timeDiscountEnd') - Date.now();
+//
+//   const hours = Math.floor(totalSeconds / (60 * 60000));
+//   const minutes = Math.floor(((totalSeconds - hours * 3600000) / 60000) % 60);
+//   const seconds = Math.floor(
+//     (totalSeconds - (hours * 3600000 + minutes * 60000)) / 1000
+//   );
+//
+//   if (seconds < 1) {
+//     clearInterval(interval);
+//     console.log('Время истекло!');
+//     timerElement.textContent = '';
+//     return;
+//   }
+//
+//   timerElement.textContent =
+//     String(hours).padStart(2, '0') +
+//     ':' +
+//     String(minutes).padStart(2, '0') +
+//     ':' +
+//     String(seconds).padStart(2, '0');
+// };
+//
+// if (localStorage.getItem('timeDiscountEnd')) {
+//   if (+localStorage.getItem('timeDiscountEnd') - Date.now() > 0) {
+//     interval = setInterval(countDown, 1000);
+//   } else {
+//     timerElement.textContent = '';
+//     clearInterval(interval);
+//   }
+// } else {
+//   localStorage.setItem('timeDiscountEnd', timeDiscountEnd);
+//   interval = setInterval(countDown, 1000);
+// }
