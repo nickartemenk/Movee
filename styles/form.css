@@ -225,6 +225,12 @@
 
 .form-timer {
   font-size: 96px;
+  min-width: 420px;
+  width: 100%;
+}
+
+.form-timer.hidden-after-end {
+  visibility: hidden;
 }
 
 .form-title__mobile, .form-button-mobile {
@@ -283,7 +289,18 @@
   gap: 22px;
 }
 
+@media (max-width: 910px) {
+  .form-timer {
+    min-width: 400px;
+  }
+}
+
 @media (max-width: 850px) {
+  .form-timer {
+    font-size: 90px;
+    min-width: 300px;
+  }
+
   .form-button-wrapper:before {
     content: none;
   }
@@ -308,6 +325,12 @@
   }
 }
 
+@media (max-width: 780px) {
+  .form-timer {
+    font-size: 70px;
+  }
+}
+
 @media (max-width: 750px) {
   .form-method__wrapper {
     gap: 10px;
@@ -315,10 +338,6 @@
 }
 
 @media (max-width: 730px) {
-  .form-timer {
-    font-size: 70px;
-  }
-
   .form-check__service-wrapper {
     justify-content: center;
     margin-right: auto;
@@ -358,6 +377,10 @@
 }
 
 @media (max-width: 655px) {
+  .form-timer {
+    min-width: 100px;
+  }
+
   .form-method__wrapper {
     flex-direction: column;
   }
